@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Food Path</title>
+	
+	<script type="text/javascript" src="cordova-1.7.0.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDD353fOPh-KBUQ-2ekPCg75uxXRn0D9Tk&sensor=false"></script>
+	<script type="text/javascript" src="json2.js"></script>
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="jquery.mobile-1.1.0.min.js"></script>
+    <script type="text/javascript" src="FoodPath.js"></script>
+	<link rel="stylesheet" href="jquery.mobile-1.1.0.min.css" /> 
+    <script type="text/javascript" charset="utf-8">
+		// Wait for Cordova to load
+		//
+		document.addEventListener("deviceready", onDeviceReady, false);
+
+		// Cordova is ready
+		//
+		function onDeviceReady() {
+			 
+			setTimeout(function() {
+				createLoc()
+			}, 2000);
+			
+		}
+
+    </script>
+    <style>
+    .BaseMenuHead{
+    	 
+    	/*opacity: 0.7*/
+    	color:#ffffff;
+    	text-shadow: none;
+    	
+    	
+    }
+    .BaseDet{
+    	color:#ffffff;
+    	text-shadow: none;
+    }
+    </style>
+​
+	
+</head>
+<body>
+	
+	<div data-role="page" id="Home"  >
+
+ 
+		<div data-role="content" style="background-image: url(foodSplash.jpg);height: 500px;background-size: cover">
+		 
+	</div>
+ 
+
+</div>
+
+<!-- Start of Home page -->
+<div data-role="page" id="Menu"  >
+
+	<div data-role="header"  data-position="fixed"  >
+	
+		<h1>Menu</h1>
+
+		
+	</div>
+
+		<div data-role="content" id='my-wrapper' data-content-theme="c" >  
+			 
+		<ul data-role="listview"  data-filter="true" data-filter-placeholder="Search Your Dish"   >
+			
+			 
+				<li value="A" style="height:60px;background-image: url(food.jpg);background-size: cover" >
+							<table style="height: 100%;width: 100%">
+								<tr>
+									<td  style="width: 10%;"><span class="ui-li-count">QR 15</span></td>
+									<td><div class="BaseMenuHead" ><h3>Chicken Biriyani</h3>
+									<p class="BaseDet">
+										Hyderabadi dum biriyani ,Really spicy
+									</p>
+									</div>
+									</td>
+							</table>
+
+							
+
+						</li>
+
+ <li value="A" style="height: 70px;background-image: url(splash1.jpg);background-size: cover;" >
+							<table style="height: 100%;width: 100%">
+								<tr>
+									<td  style="width: 10%" > </td>
+									<td  class="BaseMenuHead"><h3>Veg Biriyani</h3>
+									<p class="BaseDet">
+										Hyderabadi dum biriyani ,Really spicy
+									</p></td>
+							</table>
+
+							<span class="ui-li-count">QR 10</span>
+
+						</li>
+						
+						 <li value="A" style="height: 70px;background-image: url(thandoori.jpg);background-size: cover;" >
+							<table style="height: 100%;width: 100%">
+								<tr>
+									<td  style="width: 10%" > </td>
+									<td  class="BaseMenuHead"><h3>Thandoori Special</h3>
+									<p class="BaseDet">
+										Spicy Chicken full
+									</p></td>
+							</table>
+
+							<span class="ui-li-count">QR 40</span>
+
+						</li>
+						<li value="A" style="height: 70px;background-image: url(food.jpg);background-size: cover" >
+							<table style="height: 100%;width: 100%">
+								<tr>
+									<td  style="width: 10%;"><span class="ui-li-count">QR 15</span></td>
+									<td><div class="BaseMenuHead" ><h3>Chicken Biriyani</h3>
+									<p class="BaseDet">
+										Hyderabadi dum biriyani ,Really spicy
+									</p>
+									</div>
+									</td>
+							</table>
+
+							
+
+						</li>
+
+ <li value="A" style="height: 70px;background-image: url(splash1.jpg);background-size: cover;" >
+							<table style="height: 100%;width: 100%">
+								<tr>
+									<td  style="width: 10%" > </td>
+									<td  class="BaseMenuHead"><h3>Veg Biriyani</h3>
+									<p class="BaseDet">
+										Hyderabadi dum biriyani ,Really spicy
+									</p></td>
+							</table>
+
+							<span class="ui-li-count">QR 10</span>
+
+						</li>
+						
+						 <li value="A" style="height: 70px;background-image: url(thandoori.jpg);background-size: cover;" >
+							<table style="height: 100%;width: 100%">
+								<tr>
+									<td  style="width: 10%" > </td>
+									<td  class="BaseMenuHead"><h3>Thandoori Special</h3>
+									<p class="BaseDet">
+										Spicy Chicken full
+									</p></td>
+							</table>
+
+							<span class="ui-li-count">QR 40</span>
+
+						</li>
+						<li value="A" style="height: 70px;background-image: url(food.jpg);background-size: cover" >
+							<table style="height: 100%;width: 100%">
+								<tr>
+									<td  style="width: 10%;"><span class="ui-li-count">QR 15</span></td>
+									<td><div class="BaseMenuHead" ><h3>Chicken Biriyani</h3>
+									<p class="BaseDet">
+										Hyderabadi dum biriyani ,Really spicy
+									</p>
+									</div>
+									</td>
+							</table>
+
+							
+
+						</li>
+
+ <li value="A" style="height: 70px;background-image: url(splash1.jpg);background-size: cover;" >
+							<table style="height: 100%;width: 100%">
+								<tr>
+									<td  style="width: 10%" > </td>
+									<td  class="BaseMenuHead"><h3>Veg Biriyani</h3>
+									<p class="BaseDet">
+										Hyderabadi dum biriyani ,Really spicy
+									</p></td>
+							</table>
+
+							<span class="ui-li-count">QR 10</span>
+
+						</li>
+						
+						 <li value="A" style="height: 70px;background-image: url(thandoori.jpg);background-size: cover;" >
+							<table style="height: 100%;width: 100%">
+								<tr>
+									<td  style="width: 10%" > </td>
+									<td  class="BaseMenuHead"><h3>Thandoori Special</h3>
+									<p class="BaseDet">
+										Spicy Chicken full
+									</p></td>
+							</table>
+
+							<span class="ui-li-count">QR 40</span>
+
+						</li>
+						
+			</ul></div>
+	 
+	<div data-role="footer"   data-position="fixed" data-id="foo1">
+<div data-role="navbar"  >
+			<ul>
+				<li><a href="#Menu" data-transition="slide" data-icon="grid"  class="ui-btn-active ui-state-persist" >Menu</a></li>
+				<li><a href="#Reservation" data-transition="slide" data-icon="check"   >Reserve</a></li>
+				<li><a href="#Location" data-transition="slide" data-icon="star"  >Location</a></li>
+				<li><a href="#Search" data-transition="slide" data-icon="search"  >Search</a></li>
+				<li><a href="#More" data-transition="slide" data-icon="arrow-r"  >More</a></li>
+			</ul>
+		</div></div>
+
+</div>
+<!-- End of Home page -->
+
+<!-- Start of Trackwork Out page -->
+<div data-role="page" id="Reservation"  >
+
+	<div data-role="header"  data-position="fixed"  >
+		<h1>Reservation</h1>
+		
+		
+	</div>
+
+	<div data-role="content">	
+		 
+		<div data-role="fieldcontain" style="width: 100%">
+    
+    <input type="text" name="name" id="name" value="" placeholder="Name" style="width: 95%"/>
+    <input type="text" name="name" id="Email" value="" placeholder="Email" style="width: 95%">
+    <input type="text" name="name" id="Mobile" value="" placeholder="Mobile" style="width: 95%"/>
+    <input type="text" name="count" id="count" value="" placeholder="Seats" style="width: 95%"/>
+    <input type="datetime-local" name="datetime-l" id="datetime-l" value="" style="width: 95%"/>
+    <table style="width: 100%"><tr><td><div data-role="button" data-icon="check"> Done  </div></td><td><div data-role="button" data-icon="delete"> Clear  </div></td></tr></table>
+</div>
+
+
+
+		
+	</div>
+<div data-role="footer"   data-position="fixed" data-id="foo1">
+<div data-role="navbar"  >
+			<ul>
+				<li><a href="#Menu" data-transition="slide" data-icon="grid"   >Menu</a></li>
+				<li><a href="#Reservation" data-transition="slide" data-icon="check"   class="ui-btn-active ui-state-persist">Reserve</a></li>
+				<li><a href="#Location" data-transition="slide" data-icon="star"  >Location</a></li>
+				<li><a href="#Search" data-transition="slide" data-icon="search"  >Search</a></li>
+				<li><a href="#More" data-transition="slide" data-icon="arrow-r"  >More</a></li>
+			</ul>
+		</div></div>
+</div><!-- /page -->
+
+<!-- Start of the History page -->
+<div data-role="page" id="Location"  >
+
+    <div data-role="header"  data-position="fixed"  >
+        <h1>Location</h1>
+        
+       
+    </div>
+
+    <div data-role="content">	
+        <div id="map_canvas"  >
+        	<img src="map.png" />
+        </div> 
+    </div>
+<div data-role="footer"   data-position="fixed" data-id="foo1">
+<div data-role="navbar"  >
+			<ul>
+				<li><a href="#Menu" data-transition="slide" data-icon="grid"   >Menu</a></li>
+				<li><a href="#Reservation" data-transition="slide" data-icon="check"   >Reserve</a></li>
+				<li><a href="#Location" data-transition="slide" data-icon="star"  class="ui-btn-active ui-state-persist">Location</a></li>
+				<li><a href="#Search" data-transition="slide" data-icon="search"  >Search</a></li>
+				<li><a href="#More" data-transition="slide" data-icon="arrow-r"  >More</a></li>
+			</ul>
+		</div></div>
+</div><!-- /page -->
+
+ <!-- Start of   page -->
+<div data-role="page" id="Search"  >
+
+	<div data-role="header"  data-position="fixed"  >
+	
+		<h1>Search</h1>
+
+		
+	</div>
+
+		<div data-role="content">
+		 <input type="search" name="search-mini" id="search-mini" value="" data-mini="true" placeholder="Search"/>
+	</div>
+<div data-role="footer"   data-position="fixed" data-id="foo1">
+<div data-role="navbar"  >
+			<ul>
+				<li><a href="#Menu" data-transition="slide" data-icon="grid"   >Menu</a></li>
+				<li><a href="#Reservation" data-transition="slide" data-icon="check"   >Reserve</a></li>
+				<li><a href="#Location" data-transition="slide" data-icon="star"  >Location</a></li>
+				<li><a href="#Search" data-transition="slide" data-icon="search"  class="ui-btn-active ui-state-persist">Search</a></li>
+				<li><a href="#More" data-transition="slide" data-icon="arrow-r"  >More</a></li>
+			</ul>
+		</div></div>
+
+</div>
+<!-- End of Home page -->
+
+
+
+</body>
+</html>
